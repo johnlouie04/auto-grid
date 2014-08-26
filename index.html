@@ -1,83 +1,151 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+<html lang="en">
+  	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    	<title>Test</title>
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    	<link rel="stylesheet" type="text/css" href="css/animate.css">
+    	<link href="css/grid.css" rel="stylesheet">
+    	<script type="text/javascript" src="js/jquery.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+    	<script>
+    		$(function(){
 
-    <title>Auto-grid by johnlouie04</title>
-  </head>
+    			function animate(transition) {
+					$('.grid-row li, .grid-row div').removeClass(transition).addClass(transition).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+						$(this).removeClass(transition);
+					});
+				}
 
-  <body>
-    <header>
-      <div class="inner">
-        <h1>Auto-grid</h1>
-        <h2>Automated Grid Inspire by Heydon</h2>
-        <a href="https://github.com/johnlouie04/auto-grid" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
-
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/johnlouie04/auto-grid/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/johnlouie04/auto-grid/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/johnlouie04/auto-grid"></a> is maintained by <a href="https://github.com/johnlouie04">johnlouie04</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
-
+				function changeGrid() {
+					var grid = $('.grid-row li, .grid-row div');
+    				//var gridVal = $('input[data-name="grid-'[i]'"]').val();
+    				var eval = $('input[type=radio]').attr('data-name');
   
-  </body>
+    				if ($('#grid2').is(':checked')){
+			            grid.addClass('grid-2');
+			            grid.removeClass('grid-1 grid-3 grid-4 grid-5 grid-6 grid-7 grid-8')
+			        } else if ($('#grid3').is(':checked')) {
+			            grid.addClass('grid-3');
+			            grid.removeClass('grid-2 grid-1 grid-4 grid-5 grid-6 grid-7 grid-8')
+			        } else if ($('#grid4').is(':checked')) {
+			            grid.addClass('grid-4');
+			            grid.removeClass('grid-3 grid-1 grid-2 grid-5 grid-6 grid-7 grid-8')
+			        } else if ($('#grid5').is(':checked')) {
+			            grid.addClass('grid-5');
+			            grid.removeClass('grid-1 grid-2 grid-3 grid-4 grid-6 grid-7 grid-8')
+			        } else if ($('#grid6').is(':checked')) {
+			            grid.addClass('grid-6');
+			            grid.removeClass('grid-1 grid-2 grid-3 grid-4 grid-5 grid-7 grid-8')
+			        } else if ($('#grid7').is(':checked')) {
+			            grid.addClass('grid-7');
+			            grid.removeClass('grid-1 grid-2 grid-3 grid-4 grid-5 grid-6 grid-8')
+			      	} else if ($('#grid8').is(':checked')) {
+			            grid.addClass('grid-8');
+			            grid.removeClass('grid-1 grid-2 grid-3 grid-4 grid-5 grid-6 grid-7')
+			        } else if ($('#grid1').is(':checked')) {
+			            grid.addClass('grid-1');
+			            grid.removeClass('grid-2 grid-3 grid-4 grid-5 grid-6 grid-7 grid-8')
+			        }
+			        //dataGrid(gridVal);
+				}
+
+				function toolbar() {
+					if ($('#animateSize').is(':checked')) {
+    					$('i[data-name=play-animate]').removeClass('glyphicon-play').addClass('glyphicon-stop');
+    					$('div[data-animate]').addClass('animate-width');
+    				} else {
+    					$('i[data-name=play-animate]').removeClass('glyphicon-stop').addClass('glyphicon-play');
+    					$('div[data-animate]').removeClass('animate-width');
+    				}
+
+    				if ($('#resizeCont').is(':checked')) {
+    					$('i[data-name=resize]').removeClass('glyphicon-resize-small').addClass('glyphicon-resize-full');
+    					$('#resize').removeClass('container').addClass('fluid-container')
+    				} else {
+    					$('i[data-name=resize]').removeClass('glyphicon-resize-full').addClass('glyphicon-resize-small');
+    					$('#resize').addClass('container').removeClass('fluid-container')
+    				}
+				}
+
+    			$('.btn-group .btn input[type=radio]').change(function(){
+    				changeGrid();
+			        //animate(gridVal);
+    			});
+
+    			$('.btn-group .btn input[type=checkbox]').change(function(){
+			        //animate(gridVal);
+			        toolbar();
+    			});
+    		});
+    	</script>
+
+  	</head>
+
+  	<body>
+  		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  			<div class="text-center" style="padding: 24px;">
+  				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-primary active">
+						<input type="radio" name="grid" id="grid1" checked> Grid 1
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid2"> Grid 2
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid3"> Grid 3
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid4"> Grid 4
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid5"> Grid 5
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid6"> Grid 6
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid7"> Grid 7
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid8"> Grid 8
+					</label>
+				</div>
+
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default">
+						<input type="checkbox" id="animateSize"><i data-name="play-animate" class="glyphicon glyphicon-play"></i>
+					</label>
+					<label class="btn btn-default active">
+						<input type="checkbox" id="resizeCont" checked><i data-name="resize" class="glyphicon glyphicon-resize-full"></i>
+					</label>
+				</div>
+			</div>
+  		</div>
+  		<div id="resize" class="fluid-container" style="padding-top: 82.5px">
+  			<div data-animate="animate-width">
+	  			<div class="grid-row">
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  			</div>
+  			</div>
+  			<div class="clearfix"></div>
+	  	</div>
+
+  	</body>
 </html>
+>>>>>>> 0f97e26395e3c802a9987629a638ac351abdea91

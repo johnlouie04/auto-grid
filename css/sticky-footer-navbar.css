@@ -1,0 +1,225 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container,
+body > .fluid-container {
+  padding: 5px 15px 15px;
+}
+
+.container .text-muted,
+.fluid-container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container,
+.footer > .fluid-container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+/* custom */
+.top-bar {
+  position: fixed;
+  z-index: 9999;
+  display: block;
+  width: 100%;
+  height: 9px;
+  overflow: hidden;
+  background: url('../img/top-bar.png') repeat-x;
+  background-size: contain;
+}
+
+.radius {
+  border-radius: 100px;
+}
+
+.search-bar {
+  height: 52.5px;
+  background: #232322;
+}
+
+.search-box {
+  position: relative;
+  top: 18px;
+}
+
+.search-box input {
+  height: 25px;
+}
+
+.navbar-brand {
+  position: absolute;
+  top: 10px;
+  width: 165px;
+  height: 88px;
+  background: url('../img/logo.png') no-repeat;
+  background-size: contain;
+}
+
+.decor {
+  background: url('../img/deco.png') repeat-x;
+  background-size: contain;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.decor-invert {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -5px;
+  height: 50px;
+  background: url('../img/deco-invert.png') repeat-x;
+  background-size: contain;
+}
+
+@media screen and (max-width: 768px){
+  .decor {
+    background: #000 none;
+    margin-bottom: 20px;
+  }
+
+  .navbar-collapse.in:before {
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    background: url('../img/deco.png') repeat-x;
+    background-size: inherit;
+    background-position: bottom;
+    /* background: #fff; */
+    width: 100%;
+    left: 0;
+  }
+}
+
+.navbar-default {
+  background: transparent;
+  border: transparent;
+}
+
+.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form {
+  border-color: transparent;
+  box-shadow: none;
+  border-top: 0;
+}
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:hover, 
+.navbar-default .navbar-nav>.open>a:focus {
+  background-color: transparent;
+  color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #f37216;
+}
+
+.heading {
+  position: relative;
+  height: 448px;
+  background: rgb(243,114,22);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzNzIxNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNjllMTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  rgba(243,114,22,1) 0%, rgba(246,158,24,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(243,114,22,1)), color-stop(100%,rgba(246,158,24,1)));
+  background: -webkit-linear-gradient(top,  rgba(243,114,22,1) 0%,rgba(246,158,24,1) 100%);
+  background: -o-linear-gradient(top,  rgba(243,114,22,1) 0%,rgba(246,158,24,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(243,114,22,1) 0%,rgba(246,158,24,1) 100%);
+  background: linear-gradient(to bottom,  rgba(243,114,22,1) 0%,rgba(246,158,24,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f37216', endColorstr='#f69e18',GradientType=0 );
+}
+
+.inner-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img/inner-layer.png') no-repeat;
+  background-size: 47%;
+  background-position: 67% 70%;
+}
+
+@media screen and (max-width: 768px) {
+  .inner-layer {
+    background-size: 94%;
+    background-position: center center;
+  }
+}
+
+.outer-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img/outer-layer.png') no-repeat;
+  background-size: 35%;
+  background-position: 62% 78%;
+}
+
+@media screen and (max-width: 768px) {
+  .outer-layer {
+    background-size: 94%;
+    background-position: center center;
+  }
+}
+
+.iphone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img/iphone.png') no-repeat;
+  background-size: 15%;
+  background-position: 60% 108%;
+}
+
+@media screen and (max-width: 768px) {
+  .iphone {
+    background-size: 35%;
+    background-position: center 103%;
+  }
+}
+
+.subnav {
+  border-radius: 10px;
+}
+
+.subnav .navbar-nav>li>a {
+  color: #fff;
+}
+
+.subnav .navbar-nav>li>a:hover {
+  color: #000;
+}
