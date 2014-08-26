@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+
+    	<title>Test</title>
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    	<link rel="stylesheet" type="text/css" href="css/animate.css">
+    	<link href="css/grid.css" rel="stylesheet">
+    	<script type="text/javascript" src="js/jquery.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+    	<script>
+    		$(function(){
+
+    			function animate(transition) {
+					$('.grid-row li, .grid-row div').removeClass(transition).addClass(transition).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+						$(this).removeClass(transition);
+					});
+				}
+
+				function changeGrid() {
+					var grid = $('.grid-row li, .grid-row div');
+    				//var gridVal = $('input[data-name="grid-'[i]'"]').val();
+    				var eval = $('input[type=radio]').attr('data-name');
+  
+    				if ($('#grid2').is(':checked')){
+			            grid.addClass('grid-2');
+			            grid.removeClass('grid-1 grid-3 grid-4 grid-5 grid-6 grid-7 grid-8')
+			        } else if ($('#grid3').is(':checked')) {
+			            grid.addClass('grid-3');
+			            grid.removeClass('grid-2 grid-1 grid-4 grid-5 grid-6 grid-7 grid-8')
+			        } else if ($('#grid4').is(':checked')) {
+			            grid.addClass('grid-4');
+			            grid.removeClass('grid-3 grid-1 grid-2 grid-5 grid-6 grid-7 grid-8')
+			        } else if ($('#grid5').is(':checked')) {
+			            grid.addClass('grid-5');
+			            grid.removeClass('grid-1 grid-2 grid-3 grid-4 grid-6 grid-7 grid-8')
+			        } else if ($('#grid6').is(':checked')) {
+			            grid.addClass('grid-6');
+			            grid.removeClass('grid-1 grid-2 grid-3 grid-4 grid-5 grid-7 grid-8')
+			        } else if ($('#grid7').is(':checked')) {
+			            grid.addClass('grid-7');
+			            grid.removeClass('grid-1 grid-2 grid-3 grid-4 grid-5 grid-6 grid-8')
+			      	} else if ($('#grid8').is(':checked')) {
+			            grid.addClass('grid-8');
+			            grid.removeClass('grid-1 grid-2 grid-3 grid-4 grid-5 grid-6 grid-7')
+			        } else if ($('#grid1').is(':checked')) {
+			            grid.addClass('grid-1');
+			            grid.removeClass('grid-2 grid-3 grid-4 grid-5 grid-6 grid-7 grid-8')
+			        }
+			        //dataGrid(gridVal);
+				}
+
+				function toolbar() {
+					if ($('#animateSize').is(':checked')) {
+    					$('i[data-name=play-animate]').removeClass('glyphicon-play').addClass('glyphicon-stop');
+    					$('div[data-animate]').addClass('animate-width');
+    				} else {
+    					$('i[data-name=play-animate]').removeClass('glyphicon-stop').addClass('glyphicon-play');
+    					$('div[data-animate]').removeClass('animate-width');
+    				}
+
+    				if ($('#resizeCont').is(':checked')) {
+    					$('i[data-name=resize]').removeClass('glyphicon-resize-small').addClass('glyphicon-resize-full');
+    					$('#resize').removeClass('container').addClass('fluid-container')
+    				} else {
+    					$('i[data-name=resize]').removeClass('glyphicon-resize-full').addClass('glyphicon-resize-small');
+    					$('#resize').addClass('container').removeClass('fluid-container')
+    				}
+				}
+
+    			$('.btn-group .btn input[type=radio]').change(function(){
+    				changeGrid();
+			        //animate(gridVal);
+    			});
+
+    			$('.btn-group .btn input[type=checkbox]').change(function(){
+			        //animate(gridVal);
+			        toolbar();
+    			});
+    		});
+    	</script>
+
+  	</head>
+
+  	<body>
+  		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  			<div class="text-center" style="padding: 24px;">
+  				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-primary active">
+						<input type="radio" name="grid" id="grid1" checked> Grid 1
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid2"> Grid 2
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid3"> Grid 3
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid4"> Grid 4
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid5"> Grid 5
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid6"> Grid 6
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid7"> Grid 7
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="grid" id="grid8"> Grid 8
+					</label>
+				</div>
+
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default">
+						<input type="checkbox" id="animateSize"><i data-name="play-animate" class="glyphicon glyphicon-play"></i>
+					</label>
+					<label class="btn btn-default active">
+						<input type="checkbox" id="resizeCont" checked><i data-name="resize" class="glyphicon glyphicon-resize-full"></i>
+					</label>
+				</div>
+			</div>
+  		</div>
+  		<div id="resize" class="fluid-container" style="padding-top: 82.5px">
+  			<div data-animate="animate-width">
+	  			<div class="grid-row">
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  				<div class="grid-1"></div>
+	  			</div>
+  			</div>
+  			<div class="clearfix"></div>
+	  	</div>
+
+  	</body>
+</html>
