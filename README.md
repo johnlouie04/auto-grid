@@ -1,2 +1,2 @@
-auto-grid.github.io
+auto-grid
 ===================
