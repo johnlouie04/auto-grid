@@ -86,46 +86,50 @@
   	</head>
 
   	<body>
-  		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  			<div class="text-center" style="padding: 24px;">
-  				<div class="btn-group" data-toggle="buttons">
-					<label class="btn btn-primary active">
-						<input type="radio" name="grid" id="grid1" checked> Grid 1
-					</label>
-					<label class="btn btn-primary">
-						<input type="radio" name="grid" id="grid2"> Grid 2
-					</label>
-					<label class="btn btn-primary">
-						<input type="radio" name="grid" id="grid3"> Grid 3
-					</label>
-					<label class="btn btn-primary">
-						<input type="radio" name="grid" id="grid4"> Grid 4
-					</label>
-					<label class="btn btn-primary">
-						<input type="radio" name="grid" id="grid5"> Grid 5
-					</label>
-					<label class="btn btn-primary">
-						<input type="radio" name="grid" id="grid6"> Grid 6
-					</label>
-					<label class="btn btn-primary">
-						<input type="radio" name="grid" id="grid7"> Grid 7
-					</label>
-					<label class="btn btn-primary">
-						<input type="radio" name="grid" id="grid8"> Grid 8
-					</label>
-				</div>
 
-				<div class="btn-group" data-toggle="buttons">
-					<label class="btn btn-default">
-						<input type="checkbox" id="animateSize"><i data-name="play-animate" class="glyphicon glyphicon-play"></i>
-					</label>
-					<label class="btn btn-default active">
-						<input type="checkbox" id="resizeCont" checked><i data-name="resize" class="glyphicon glyphicon-resize-full"></i>
-					</label>
-				</div>
-			</div>
+  		<div class="fluid-container" style="min-height: 150px; background-color: #47a3da; padding: 1em 2em; color: #fff;">
+			<h1>Automated Grid</h1>
+			<h3>Inspired by: <a href="https://twitter.com/heydonworks" target="_blank" style="color: #fff;">Heydon</a></h3>
   		</div>
-  		<div id="resize" class="fluid-container" style="padding-top: 82.5px">
+
+		<div class="text-center" style="padding: 24px;">
+			<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-primary active">
+				<input type="radio" name="grid" id="grid1" checked> Grid 1
+			</label>
+			<label class="btn btn-primary">
+				<input type="radio" name="grid" id="grid2"> Grid 2
+			</label>
+			<label class="btn btn-primary">
+				<input type="radio" name="grid" id="grid3"> Grid 3
+			</label>
+			<label class="btn btn-primary">
+				<input type="radio" name="grid" id="grid4"> Grid 4
+			</label>
+			<label class="btn btn-primary">
+				<input type="radio" name="grid" id="grid5"> Grid 5
+			</label>
+			<label class="btn btn-primary">
+				<input type="radio" name="grid" id="grid6"> Grid 6
+			</label>
+			<label class="btn btn-primary">
+				<input type="radio" name="grid" id="grid7"> Grid 7
+			</label>
+			<label class="btn btn-primary">
+				<input type="radio" name="grid" id="grid8"> Grid 8
+			</label>
+		</div>
+
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-default">
+				<input type="checkbox" id="animateSize"><i data-name="play-animate" class="glyphicon glyphicon-play"></i>
+			</label>
+			<label class="btn btn-default active">
+				<input type="checkbox" id="resizeCont" checked><i data-name="resize" class="glyphicon glyphicon-resize-full"></i>
+			</label>
+		</div>
+		</div>
+  		<div id="resize" class="fluid-container">
   			<div data-animate="animate-width">
 	  			<div class="grid-row">
 	  				<div class="grid-1"></div>
