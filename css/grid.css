@@ -45,13 +45,18 @@ ul {
 
 .fluid-container,
 .container{
-    -webkit-transition: all ease .5s;
+    -webkit-transition: all ease .5s; 
     -moz-transition: all ease .5s;
-    transition: all ease .5s;
+    transition: all ease .5s; 
 }
 
-/* for counting purposes only */
-/*.grid-row {
+body > .fluid-container.
+body > .container {
+    padding: 0;       
+}
+
+/* for counting purposes only */    
+.grid-row {
     counter-reset: grid-number;
 }
 
@@ -69,7 +74,7 @@ ul {
     content: counter(grid-number);
     user-select: none;
     opacity: .4;
-}*/
+}
 
 /* grid system */
 .grid-1,

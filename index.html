@@ -7,18 +7,19 @@
 	    <meta name="author" content="John Louie Binas">
 
     	<title>Automated Grid</title>
-    	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    	<link href="css/grid.css" rel="stylesheet">
+    	<link rel="stylesheet" href="dest/bootstrap.min.css">
+    	<link rel="stylesheet" href="dest/sticky-footer-navbar.css">
+    	<link rel="stylesheet" href="dest/grid.min.css">
     	<script type="text/javascript" src="js/jquery.js"></script>
     	<script src="js/bootstrap.min.js"></script>
     	<script>
     		$(function(){
 
-    			function animate(transition) {
+    			/*function animate(transition) {
 					$('.grid-row li, .grid-row div').removeClass(transition).addClass(transition).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 						$(this).removeClass(transition);
 					});
-				}
+				}*/
 
 				function changeGrid() {
 					var grid = $('.grid-row li, .grid-row div');
